@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Allow direct access to static files (images, JS, CSS)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Redirect all other requests to index.html (for SPA routing)
+  RewriteRule ^.*$ /index.html [L]
+</IfModule>
+
+# Enable custom headers for specific file types
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webm)$">
+    Header set Content-Type "video/webm"
+  </FilesMatch>
+</IfModule>

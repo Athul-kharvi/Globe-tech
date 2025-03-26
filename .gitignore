@@ -1,0 +1,23 @@
+# Node.js dependencies
+/node_modules
+/public
+ 
+# Next.js build files (only needed if using `next start`, not `next export`)
+.next/
+
+# Static export output (exclude if using dynamic SSR)
+out/
+
+# Development & config files
+*.log
+*.zip
+.DS_Store
+.htaccess  # Optional if not using Apache
+components.json  # If not used
+next-env.d.ts
+postcss.config.mjs
+tailwind.config.ts
+tsconfig.json
+
+.cache/
+dist/
