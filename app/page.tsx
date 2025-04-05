@@ -121,7 +121,7 @@ export default function Home() {
 
 
 
-      {/* Technology Section */}
+      {/* Certificate Section */}
       <section id="certificate" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center text-[#EBFC41]">
@@ -194,8 +194,7 @@ export default function Home() {
 
 
 
-      {/* <div className="min-h-screen flex items-center justify-center bg-gray-800"> */}
-      {/* </div> */}
+
 
 
       {/* About Section */}
@@ -298,7 +297,7 @@ export default function Home() {
                 title: "Cold Forging",
                 description:
                   "Innovative cold forging techniques to produce strong, lightweight components with minimal material waste and improved durability.",
-                image: "/cold-forging.webp",
+                image: "/mini-hero.webp",
                 link: "/cold-forging",
               },
             ].map((project, index) => (
@@ -381,9 +380,9 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 text-[#EBFC41]">Join Our Team</h2>
           <p className="text-xl text-gray-300 mb-8">We're always looking for talented individuals to join our innovative team.</p>
-          <a href="#" className="inline-block py-3 px-8 bg-[#EBFC41] text-black rounded-full text-lg font-semibold hover:bg-white transition-colors duration-300">
-            View Opportunies
-          </a>
+          <Link href="/career" className="inline-block py-3 px-8 bg-[#EBFC41] text-black rounded-full text-lg font-semibold hover:bg-white transition-colors duration-300">
+  View Opportunities
+</Link>
 
         </div>
       </section>

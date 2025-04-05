@@ -47,24 +47,35 @@ const FeatureHeader: React.FC<FeatureHeaderProps> = ({ disableLinks = false }) =
 
           {/* Mobile Menu Toggle Button */}
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white">
-              {isMenuOpen ? 'Close' : 'Menu'}
-            </button>
-          </div>
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="bg-white text-black p-2 rounded-full shadow-md transition-transform transform hover:scale-100"
+        >
+          {isMenuOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          )}
+        </button>
+      </div>
+
 
           {/* Navigation Menu */}
           <ul className={`md:flex md:space-x-12 rounded-md border border-white border-opacity-10
             ${isMenuOpen 
               ? 'absolute top-full left-6 right-4 bg-white/10 backdrop-blur-lg px-4 py-5 rounded-3xl space-y-4 border border-white/10 shadow-full text-center transition-all duration-300 ease-in-out'
               : 'hidden'}
-            md:relative md:bg-[#363636] md:px-12 md:py-4 md:border border-white border-opacity-10 md:rounded-full` }
+            md:relative md:bg-[#363636] md:px-12 md:py-4 md:border border-white border-opacity-10 md:rounded-full`}
           >
             {[ 
               { name: 'Home', path: '/' },
               { name: 'CNC', path: '/cnc' },
               { name: 'Heat Treatment', path: '/heat-treatment' },
               { name: 'Cold Forging', path: '/cold-forging' },
-              { name: 'dummy data', path: '/dummy'}
             ].map((item) => (
               <li key={item.name} className="text-lg md:text-l font-medium">
                 {disableLinks ? (

@@ -23,7 +23,7 @@ export default function VisionMission() {
             whileInView={{ opacity: 1, y: 0 }} // Animate to visible
             viewport={{ once: true, amount: 0.2 }} // Trigger when 20% is in view
             transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
-            className="max-w-80 p-6 bg-customBlack border border-gray-200 rounded-3xl shadow-sm dark:bg-gray-800 dark:border-gray-700"
+            className="max-w-80 p-6 bg-customBlack border border-gray-200 rounded-3xl shadow-sm"
           >
             {/* Eye Icon */}
             <svg
@@ -77,7 +77,7 @@ export default function VisionMission() {
             whileInView={{ opacity: 1, y: 0 }} // Animate to visible
             viewport={{ once: true, amount: 0.2 }} // Trigger when 20% is in view
             transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
-            className="max-w-80 p-6 bg-customBlack border border-gray-200 rounded-3xl shadow-sm dark:bg-gray-800 dark:border-gray-700"
+            className="max-w-80 p-6 bg-customBlack border border-gray-200 rounded-3xl shadow-sm"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none"
               viewBox="0 0 24 24"
@@ -120,7 +120,7 @@ export default function VisionMission() {
             viewport={{ once: true, amount: 0.2 }} // Trigger when 20% is in view
             transition={{ duration: 0.8, ease: "easeOut" }}
 
-            className="max-w-96 p-6 bg-customBlack  border border-gray-200 rounded-3xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            className="max-w-96 p-6 bg-customBlack  border border-gray-200 rounded-3xl shadow-sm">
 
 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 mb-3">
