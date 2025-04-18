@@ -337,7 +337,7 @@ export default function Home() {
       {/* Leadership Section */}
       <section id="leadership" className="py-20 bg-neutral-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-inter font-medium leading-normal tracking-normal mb-12 text-center text-orange-500">
+          <h2 className="text-5xl font-inter font-semibold leading-normal tracking-normal mb-12 text-center text-orange-500">
             Our Leaders
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -345,14 +345,16 @@ export default function Home() {
               (name, index) => (
                 <div key={name} className="text-center">
                   <div className="mb-4 relative w-40 h-40 mx-auto">
+                    <div className="absolute inset-0 rounded-full border-4 border-orange-400 z-50"  />
                     <Image
                       src={`/image/leader${index + 1}.jpg`}
                       alt={name}
                       layout="fill"
                       objectFit="cover"
-                      className="rounded-full"
+                      className="rounded-full z-10"
                     />
                   </div>
+
                   <h3 className="text-2xl font-semibold mb-2 text-customBlack">
                     {name}
                   </h3>
