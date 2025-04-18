@@ -8,12 +8,9 @@ import FeatureHeader from "../components/FeatureHeader";
 const HeatTreatment = () => {
   const machineryList = [
     {
-      title: "Sealed Quench Furnace - 4No’s",
-      description: "Tempering Furnaces of 650Kgs/batch capacity- 4Nos : 650 Width X 610 HeightX1250 length Make : Elegant Furnaces",
-    },
-    {
-      title: "Alkali washing machine",
-      description: "1No",
+      title: "Sealed Quench Furnace - 4nos",
+      description:
+        "Tempering Furnaces of 650Kgs/batch capacity- 4Nos : 650 Width X 610 HeightX1250 length Make : Elegant Furnaces",
     },
     {
       title: "Quench oil tanks - 2nos",
@@ -21,11 +18,27 @@ const HeatTreatment = () => {
     },
     {
       title: "Pit type gas carburizing furnaces - 3nos",
-      description: "Dia 680mm X 1700 mm Length : 1no \n Dia 680mm X 1400 mm Length : 1no \nDia 600mm X 1000 mm Length : 1no",
+      description:
+        "Dia 680mm X 1700 mm Length : 1no \n Dia 680mm X 1400 mm Length : 1no \nDia 600mm X 1000 mm Length : 1no",
     },
     {
       title: "Pit type Tempering Furnaces - 2nos",
-      description: "Dia 680mm X 1800 mm Length : 1no \n Dia 600mm X 1000 mm Length : 1no",
+      description:
+        "Dia 680mm X 1800 mm Length : 1no \n Dia 600mm X 1000 mm Length : 1no",
+    },
+    {
+      title: "Pit type furnace - 2no",
+      description:
+        "Capacity : 2.5 Ton/day. \nPlanned to install 1 more furnace of 2Ton capacity before Dec 2024.",
+    },
+    {
+      title: "Critical Measuring Instruments",
+      description:
+        "Contour Tracer Make – Carl Zeiss & Model 1600G Contura.\nProfile Projector Make – Dynascan \nRockwell Hardness Tester\nEddy Current Tester - Vibrant",
+    },
+    {
+      title: "Alkali washing machine",
+      description: "1nos",
     },
   ];
   return (
@@ -137,21 +150,44 @@ const HeatTreatment = () => {
         >
           Machinery Details
         </motion.h1>
-        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 mt-14">
-      {machineryList.map((machine, idx) => (
-        <div
-          key={idx}
-          className="relative overflow-hidden rounded-3xl border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
-        >
-          <div className="flex h-[200px] flex-col justify-between rounded-2xl p-6">            
-            <div className="space-y-2">
-              <h3 className="font-ftregolaneue font-medium text-2xl">{machine.title}</h3>
-              <p className="text-sm text-muted-foreground whitespace-pre-line tracking-normal leading-normal">{machine.description}</p>
-            </div>
+        <div className="flex justify-center items-start gap-10 mt-14 px-4">
+          {/* Grid Section */}
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:max-w-[50rem] md:flex-row">
+            {machineryList.map((machine, idx) => (
+              <div
+                key={idx}
+                className="relative overflow-hidden rounded-3xl border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+              >
+                <div className="flex h-[260px] flex-col justify-between rounded-2xl p-6">
+                  <div className="space-y-2">
+                    <h3 className="font-ftregolaneue font-medium text-2xl text-left">
+                      {machine.title}
+                    </h3>
+                    <div className="w-16 h-1 bg-orange-500 mb-4 rounded-full"></div>
+
+                    <p className="text-xs text-muted-foreground whitespace-pre-line tracking-normal leading-normal text-left">
+                      {machine.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Image Section (Right Side) */}
+          <div className="hidden md:flex sm:flex flex-col items-center gap-6 bg-gray-50 py-5 px-8 rounded-xl ">
+            <img
+              src="/pit-type1.jpg"
+              alt="Pit Type Small"
+              className="w-64 h-auto object-contain rounded-2xl"
+            />
+            <img
+              src="/pit-type.jpg"
+              alt="Pit Type Large"
+              className="w-64 h-auto object-contain mt-5 rounded-2xl "
+            />
           </div>
         </div>
-      ))}
-    </div>
       </section>
 
       <DefaultPage />
