@@ -1,6 +1,6 @@
 # Node.js dependencies
 /node_modules
-/public
+# /public
  
 # Next.js build files (only needed if using `next start`, not `next export`)
 .next/
@@ -13,11 +13,11 @@ out/
 *.zip
 .DS_Store
 .htaccess  # Optional if not using Apache
-components.json  # If not used
+# components.json  # If not used
 next-env.d.ts
-postcss.config.mjs
-tailwind.config.ts
-tsconfig.json
+# postcss.config.mjs
+# tailwind.config.ts
+# tsconfig.json
 
 .cache/
 dist/
