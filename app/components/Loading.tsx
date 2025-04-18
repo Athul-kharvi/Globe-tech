@@ -21,9 +21,9 @@ export default function Loading() {
         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M50 5 L60 15 L75 10 L80 25 L95 30 L90 45 L100 50 L90 55 L95 70 L80 75 L75 90 L60 85 L50 95 L40 85 L25 90 L20 75 L5 70 L10 55 L0 50 L10 45 L5 30 L20 25 L25 10 L40 15 Z"
-            fill="#EBFC41"
+            fill="orange"
           />
-          <circle cx="50" cy="50" r="20" fill="black" stroke="#EBFC41" strokeWidth="4" />
+          <circle cx="50" cy="50" r="20" fill="black" stroke="orange" strokeWidth="4" />
         </svg>
       </motion.div>
 

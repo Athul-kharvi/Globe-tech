@@ -42,6 +42,10 @@ body {
   font-display: swap;
 }
 
+.filter-orange {
+  filter: invert(46%) sepia(95%) saturate(600%) hue-rotate(-10deg) brightness(105%) contrast(100%);
+}
+
 
 .clip-circle {
   clip-path: circle(50% at 50% 50%);

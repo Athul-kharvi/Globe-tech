@@ -100,11 +100,13 @@ const Header: React.FC<HeaderProps> = ({ disableLinks = false }) => {
             className={`md:flex md:space-x-12 rounded-md border border-white border-opacity-10
             ${
               isMenuOpen
-                ? "absolute top-full left-6 right-4 bg-white/10 backdrop-blur-lg px-4 py-5 rounded-3xl space-y-4 border border-white/10 shadow-full text-center transition-all duration-300 ease-in-out"
+                ? "absolute top-full left-6 right-4 px-4 py-5 rounded-3xl space-y-4 border border-white/10 shadow-full text-center transition-all duration-300 ease-in-out bg-white/10 backdrop-blur-lg"
                 : "hidden"
             }
-            md:relative md:bg-[#363636] md:px-12 md:py-4 md:border border-white border-opacity-10 md:rounded-full`}
+            md:relative md:bg-slate-50 md:backdrop-blur-xl md:px-12 md:py-4 md:border border-white border-opacity-10 md:rounded-full`}
           >
+
+
             {[
               "Certificate",
               "About",
@@ -120,8 +122,8 @@ const Header: React.FC<HeaderProps> = ({ disableLinks = false }) => {
                   </span>
                 ) : (
                   <Link
-                    href={item === "Blogs" ? "/blog" : `#${item.toLowerCase()}`}
-                    className="block md:inline-block py-2 md:py-0 text-white hover:text-[#EBFC41] transition-colors duration-300 font-medium"
+                    href={item === "Blogs" ? "/blogs" : `#${item.toLowerCase()}`}
+                    className="block md:inline-block py-2 md:py-0 text-customBlack hover:text-customOrange transition-colors duration-300 font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item}
@@ -135,7 +137,7 @@ const Header: React.FC<HeaderProps> = ({ disableLinks = false }) => {
           <Link
             href="#contact"
             onClick={scrollToContact}
-            className="hidden md:inline-flex items-center justify-center gap-x-4 py-4 px-6 bg-[#EBFC41] text-black rounded-full hover:bg-white transition-colors duration-300 font-semibold"
+            className="hidden md:inline-flex items-center justify-center gap-x-4 py-4 px-6 bg-orange-500 text-black rounded-full hover:bg-white transition-colors duration-300 font-semibold"
           >
             Contact
             <img

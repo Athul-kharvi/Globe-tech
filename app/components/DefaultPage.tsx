@@ -5,7 +5,7 @@ const DefaultPage = () => {
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center text-[#EBFC41]">
+        <h2 className="text-4xl font-bold mb-12 text-center text-orange-500">
           Contact Us
         </h2>
 
@@ -26,9 +26,9 @@ const DefaultPage = () => {
 
             <h3 className="text-2xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-[#EBFC41] hover:text-white transition-colors duration-300"><Facebook /></a>
-              <a href="#" className="text-[#EBFC41] hover:text-white transition-colors duration-300"><LinkedIn /></a>
-              <a href="#" className="text-[#EBFC41] hover:text-white transition-colors duration-300"><Instagram /></a>
+              <a href="https://www.facebook.com/profile.php?id=61571478760214" target="_blank" className="text-white hover:text-white transition-colors duration-300"><Facebook /></a>
+              <a href="#" className="text-white hover:text-white transition-colors duration-300"><LinkedIn /></a>
+              <a href="https://www.instagram.com/fortune_industries_group/" target="_blank" className="text-white hover:text-white transition-colors duration-300"><Instagram /></a>
             </div>
           </div>
 
@@ -43,7 +43,7 @@ const DefaultPage = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full  h-72 rounded-xl border border-gray-300 transition-all duration-300 hover:border-[#EBFC41] hover:shadow-xl hover:scale-105"
+              className="w-full  h-72 rounded-xl border border-gray-300 transition-all duration-300 hover:border-orange-500 hover:shadow-xl hover:scale-105"
             ></iframe>
           </div>
         </div>

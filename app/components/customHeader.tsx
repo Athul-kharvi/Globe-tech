@@ -39,7 +39,7 @@ const CustomHeader: React.FC = () => {
           {/* Contact Button */}
           <Link 
             href="../" 
-            className="inline-flex items-center justify-center gap-x-4 py-3 px-6 bg-[#EBFC41] text-black rounded-full hover:bg-white transition-colors duration-300 font-semibold"
+            className="inline-flex items-center justify-center gap-x-4 py-3 px-6 bg-orange-500 text-black rounded-full hover:bg-white transition-colors duration-300 font-semibold"
           >
             Back To Home
             <img src="/image/arrow_button.png" alt="Arrow" className="w-5 h-5" />

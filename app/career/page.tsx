@@ -1,7 +1,8 @@
-'use client'
+"use client";
+import Link from "next/link";
 
-import React from 'react'
-import CustomHeader from '../components/customHeader'
+import React from "react";
+import CustomHeader from "../components/customHeader";
 
 const CareerPage = () => {
   return (
@@ -22,9 +23,12 @@ const CareerPage = () => {
         {/* Job Card */}
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-white border border-gray-200 shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-            <h2 className="text-xl md:text-2xl font-semibold text-[#333]">Lathe Operator</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-[#333]">
+              Lathe Operator
+            </h2>
             <p className="text-gray-600 mt-2">
-              We are looking for a passionate Operator with experience in Industry.
+              We are looking for a passionate Operator with experience in
+              Industry.
             </p>
 
             {/* Details */}
@@ -34,14 +38,20 @@ const CareerPage = () => {
             </div>
 
             {/* Apply Button */}
-            <button className="mt-6 bg-customYellow text-customBlack py-2 px-6 rounded-full hover:bg-[#a8642b] transition-colors duration-300">
-              Apply Now
-            </button>
+            <a
+              href="https://career.fortuneindocorp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="mt-6 bg-orange-500 text-customBlack py-2 px-6 rounded-full hover:bg-[#a8642b] transition-colors duration-300">
+                Apply Now
+              </button>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CareerPage
+export default CareerPage;

@@ -12,8 +12,10 @@ const industries = [
   { name: "Automotive", image: "/cnc-image/automotive.webp" },
   { name: "Aerospace", image: "/cnc-image/aerospace.webp" },
   { name: "Medical Devices", image: "/cnc-image/medical.webp" },
-  { name: "Electronics", image: "/cnc-image/electronic.webp" },
-  { name: "Heavy Engineering", image: "/cnc-image/engineering.webp" }
+  { name: "Hydraullic Division", image: "/cnc-image/hydraullic.webp" },
+  { name: "Heavy Engineering", image: "/cnc-image/engineering.webp" },
+  { name: "Defense ", image: "/cnc-image/tank-img.webp" },
+
 ];
 
 
