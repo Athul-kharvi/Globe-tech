@@ -62,7 +62,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen w-screen overflow-x-hidden">
+    <main className="min-h-screen w-screen overflow-hidden">
       <Header />
 
       {/* Hero Section */}
@@ -106,7 +106,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Blurry Effect */}
-        <div className="absolute bottom-0 left-0 w-screen h-12 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[4px] z-10"></div>
+        <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[4px] z-10"></div>
       </section>
 
       {/* Certificate Section */}
@@ -123,12 +123,11 @@ export default function Home() {
                 key={certificate.id}
                 className="relative flex flex-col items-center text-center mt-10"
               >
-               <img
-  src="/image/icons8-arrow-64.png"
-  alt="Arrow"
-  className="absolute -top-16 left-1/2 transform -translate-x-1/3 rotate-90 w-16 h-16 z-10 filter-orange"
-/>
-
+                <img
+                  src="/image/icons8-arrow-64.png"
+                  alt="Arrow"
+                  className="absolute -top-16 left-1/2 transform -translate-x-1/3 rotate-90 w-16 h-16 z-10 filter-orange"
+                />
 
                 {/* Yellow Hover Circle */}
                 <div
