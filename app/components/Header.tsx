@@ -108,10 +108,11 @@ const Header: React.FC<HeaderProps> = ({ disableLinks = false }) => {
 
 
             {[
-              "Certificate",
               "About",
               "Services",
               "Leadership",
+              "Certificate",
+              "Awards",
               "Careers",
               "Blogs",
             ].map((item) => (

@@ -21,7 +21,7 @@ export default function CNCPage() {
     {
       title: "Cnc Turning Machine - 6nos (Ace Super Jobber XL)",
       description:
-        "Capacity : Ø10 mm to 250 mm & length 500 mm \n SPM Machine for Keyway\nPlanned to install 3 more CNC Turning Machine before Dec 2025.",
+        "Capacity : Ø10 mm to 250 mm & length 500 mm \n SPM Machine for Keyway\nPlanned to install 3 more CNC Turning Machine before Dec 2025 CNC \nTURNING MACHINE ACE-JOBBER XL : Ø10 mm to 250 mm & length 400 mm - 4 No’s\nCNC TURNING MACHINE MAZZAK : Ø25 mm to 500 mm & length 1600 mm – 1No",
     },
     {
       title: "Sawing machine - 3nos ",
@@ -29,19 +29,9 @@ export default function CNCPage() {
         "Capacity : Ø10 mm to 80 mm (Circular Saw) – 2 Nos\n  Capacity : Ø10 mm to 250 mm (Band Saw) – 1 No",
     },
     {
-      title: "CNC Turning Machine - 6nos (Ace Super Jobber XL)",
-      description:
-        "CNC TURNING MACHINE ACE-JOBBER XL : Ø10 mm to 250 mm & length 400 mm - 4 No’s\nCNC TURNING MACHINE MAZZAK : Ø25 mm to 500 mm & length 1600 mm – 1No.",
-    },
-    {
       title: "VERTICAL  MACHINING CENTRE(VMC) - BFW-BMV-45 AXIS.",
       description:
         "VERTICAL  MACHINING CENTRE(VMC) AMS-MCV-300 x-300 * Y-450* Z-300 MM WITH DOUBLE PALLET – 1No.\nCYLINDRICAL GRINDING MACHINE - ACE-ECO200E -  ONLY OD GRINDING Ø 75 * 200 long – 2 No’s.",
-    },
-    {
-      title: "CNC Turning Machine - 6nos (Ace Super Jobber XL)",
-      description:
-        "PLASTIC INJECTION MOULDING MACHINE -SHINEWELL-THIVAN – 1No. (FROM 25 GRAMS TO UPTO 90 GRAM CAPACITY WITH ALL ENGINEERING PLASTICS MATERIAL ).",
     },
   ];
 
@@ -222,7 +212,7 @@ export default function CNCPage() {
               key={idx}
               className="relative overflow-hidden rounded-3xl border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
             >
-              <div className="flex h-[300px] flex-col justify-between rounded-2xl p-6">
+              <div className="flex h-[400px] flex-col justify-between rounded-2xl p-6">
                 <div className="space-y-2">
                   <h3 className="font-ftregolaneue font-medium text-xl text-left">
                     {machine.title}

@@ -106,92 +106,10 @@ export default function Home() {
         </div>
 
         {/* Bottom Blurry Effect */}
-        <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[4px] z-10"></div>
+        <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
       </section>
 
-      {/* Certificate Section */}
-      <section id="certificate" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-ftregolaneue leading-normal tracking-normal mb-12 text-center text-customBlack">
-            Our Certificates
-          </h2>
 
-          {/* Certificate Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-center">
-            {certificates.map((certificate) => (
-              <div
-                key={certificate.id}
-                className="relative flex flex-col items-center text-center mt-10"
-              >
-                <img
-                  src="/image/icons8-arrow-64.png"
-                  alt="Arrow"
-                  className="absolute -top-16 left-1/2 transform -translate-x-1/3 rotate-90 w-16 h-16 z-10 filter-orange"
-                />
-
-                {/* Yellow Hover Circle */}
-                <div
-                  className="relative w-48 h-48 rounded-full bg-slate-200 flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105"
-                  onMouseEnter={() => setSelectedCertificate(certificate)}
-                >
-                  <span className="text-black font-bold text-lg">View</span>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-semibold mt-4 text-customBlack">
-                  {certificate.title}
-                </h3>
-              </div>
-            ))}
-          </div>
-
-          {/* Full-Screen Modal with Blur Effect */}
-          <AnimatePresence>
-            {selectedCertificate && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-md z-50"
-                onMouseLeave={() => setSelectedCertificate(null)} // Close when mouse leaves
-              >
-                <motion.div
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0.5 }}
-                  transition={{ duration: 0.3 }}
-                  className="relative bg-white p-6 rounded-lg shadow-lg max-w-xl w-screen flex flex-col items-center"
-                >
-                  {/* Close Button */}
-                  <button
-                    onClick={() => setSelectedCertificate(null)}
-                    className="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl"
-                  >
-                    ✖
-                  </button>
-
-                  {/* Certificate Image */}
-                  <Image
-                    src={selectedCertificate.image}
-                    alt={selectedCertificate.title}
-                    width={400}
-                    height={600}
-                    className="rounded-lg w-screen max-h-[80vh] object-contain"
-                  />
-
-                  {/* Certificate Title */}
-                  <h2 className="text-2xl font-bold mt-4">
-                    {selectedCertificate.title}
-                  </h2>
-                </motion.div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </section>
-
-      {/* About Section */}
       <section id="about" className="py-20 bg-white relative">
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center opacity-20 w-screen"></div>
@@ -263,11 +181,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Brand logos  */}
-      <Carousel />
-
-      {/* Vision Missino section  */}
-      <VisionMission />
 
       {/* Service Section */}
       <section id="services" className="py-20 bg-neutral-50">
@@ -334,8 +247,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Leadership Section */}
-      <section id="leadership" className="py-20 bg-neutral-50">
+
+       {/* Leadership Section */}
+       <section id="leadership" className="py-20 bg-neutral-50">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-inter font-semibold leading-normal tracking-normal mb-12 text-center text-orange-500">
             Our Leaders
@@ -377,6 +291,79 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+            {/* certificate section? */}
+      <section id="certificate" className="py-20 bg-slate-50">
+  <div className="container mx-auto px-4">
+    <h2 className="text-4xl md:text-5xl font-ftregolaneue leading-normal tracking-normal mb-12 text-center text-customBlack">
+      Our Certificates
+    </h2>
+
+    {/* Certificate Grid - Centered for 2 items */}
+    <div className="flex flex-wrap justify-center gap-56">
+      {certificates.map((certificate) => (
+        <div
+          key={certificate.id}
+          className="flex flex-col items-center text-center"
+        >
+          <img
+            src={certificate.image}
+            alt={certificate.title}
+            className="w-full max-w-xs h-auto rounded-lg shadow-md object-contain"
+          />
+          <h3 className="text-xl font-semibold mt-4 text-customBlack">
+            {certificate.title}
+          </h3>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+      {/* Awards Section */}
+      <section
+  id="awards"
+  className="py-20 bg-slate-50 bg-[url('/image/awards-bck.jpg')] bg-cover bg-center bg-no-repeat"
+>
+  <div className=" bg-opacity-30 py-10 px-4 rounded-lg">
+    <div className="container mx-auto px-4">
+      <h2 className="text-4xl md:text-5xl font-ftregolaneue leading-normal tracking-normal mb-12 text-center text-customBlack">
+        Our Awards
+      </h2>
+
+      <div className="flex justify-center">
+        <div className="flex flex-col items-center text-center">
+          <img
+            src="/bosch_achivement.jpg"
+            alt="Award"
+            className="w-full max-w-xs h-auto rounded-lg shadow-md object-contain"
+          />
+          <h3 className="text-xl font-semibold mt-4 text-customBlack">
+            Best Innovation Award
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+     
+
+      {/* Brand logos  */}
+      <Carousel />
+
+      {/* Vision Missino section  */}
+      <VisionMission />
+
+      {/* Service Section */}
+     
+
+     
 
       <div className="absolute bottom-0 left-0 w-screen h-12 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[4px] z-10"></div>
 
