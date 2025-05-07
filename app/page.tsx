@@ -9,6 +9,9 @@ import Link from "next/link";
 import DefaultPage from "./components/DefaultPage";
 import Carousel from "./components/Carousel";
 import VisionMission from "./components/VisionMission";
+import EmployeeCount from "./components/EmployeeCount";
+
+
 
 const sections = [
   {
@@ -90,7 +93,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-20 text-white">
           {/* Adjust font size and spacing based on screen size */}
           <h1 className="text-lg sm:text-2xl md:text-5xl font-bold mb-2 sm:mb-4">
-            Globe Tech Fortune Industries Pvt Ltd
+            Fortune Group of Industries Pvt Ltd
           </h1>
           <p className="text-sm sm:text-lg md:text-2xl mb-4 sm:mb-8 text-gray-300">
             Specialists in CNC Machining, Heat Treatment, and Cold Forging
@@ -109,6 +112,76 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
       </section>
 
+
+
+    
+
+      {/* Service Section */}
+      <section id="services" className="py-20 bg-neutral-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-12 text-center text-customBlack">
+            Fortune Group of Industries
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "CNC Machining",
+                description:
+                  "High-precision CNC machining solutions for complex engineering parts, ensuring accuracy, efficiency, and superior surface finish.",
+                image: "/cnc-machining.webp",
+                link: "/cnc",
+              },
+              {
+                title: "Heat Treatment",
+                description:
+                  "Advanced heat treatment processes to enhance the mechanical properties of metals, including hardening, tempering, and annealing.",
+                image: "/heat-treatment.webp",
+                link: "/heat-treatment",
+              },
+              {
+                title: "Cold Forging",
+                description:
+                  "Innovative cold forging techniques to produce strong, lightweight components with minimal material waste and improved durability.",
+                image: "/mini-hero.webp",
+                link: "/cold-forging",
+              },
+            ].map((project, index) => (
+              <div
+                key={index}
+                className="bg-black rounded-xl overflow-hidden shadow-lg group transition-all duration-300 hover:shadow-xl"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
+                  <div className="w-16 h-1 bg-orange-500 mb-4 rounded-full"></div>
+
+                  <p className="text-gray-400">{project.description}</p>
+                  {/* Button for navigation */}
+                  <Link
+                    href={project.link}
+                    className="mt-4 inline-block px-6 py-3 bg-orange-500 text-black font-bold rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+            {/* about us  */}
 
       <section id="about" className="py-20 bg-white relative">
         {/* Background Image */}
@@ -180,73 +253,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
-      {/* Service Section */}
-      <section id="services" className="py-20 bg-neutral-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center text-customBlack">
-            Featured Service
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "CNC Machining",
-                description:
-                  "High-precision CNC machining solutions for complex engineering parts, ensuring accuracy, efficiency, and superior surface finish.",
-                image: "/cnc-machining.webp",
-                link: "/cnc",
-              },
-              {
-                title: "Heat Treatment",
-                description:
-                  "Advanced heat treatment processes to enhance the mechanical properties of metals, including hardening, tempering, and annealing.",
-                image: "/heat-treatment.webp",
-                link: "/heat-treatment",
-              },
-              {
-                title: "Cold Forging",
-                description:
-                  "Innovative cold forging techniques to produce strong, lightweight components with minimal material waste and improved durability.",
-                image: "/mini-hero.webp",
-                link: "/cold-forging",
-              },
-            ].map((project, index) => (
-              <div
-                key={index}
-                className="bg-black rounded-xl overflow-hidden shadow-lg group transition-all duration-300 hover:shadow-xl"
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    {project.title}
-                  </h3>
-                  <div className="w-16 h-1 bg-orange-500 mb-4 rounded-full"></div>
-
-                  <p className="text-gray-400">{project.description}</p>
-                  {/* Button for navigation */}
-                  <Link
-                    href={project.link}
-                    className="mt-4 inline-block px-6 py-3 bg-orange-500 text-black font-bold rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
 
        {/* Leadership Section */}
        <section id="leadership" className="py-20 bg-neutral-50">
@@ -367,19 +373,24 @@ export default function Home() {
 
       <div className="absolute bottom-0 left-0 w-screen h-12 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[4px] z-10"></div>
 
+
       {/* Careers Section */}
       <section
         id="careers"
         className="relative py-20 bg-gradient-to-b from-zinc-50 to-orange-50 overflow-hidden"
-      >
+        >
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-[url('/image/background-image.webp')] bg-cover bg-center opacity-70 z-0"
           aria-hidden="true"
-        ></div>
+          ></div>
+
+        {/* Employee count */}
+
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
+          <EmployeeCount/>
           <h2 className="text-4xl font-bold mb-6 text-customBlack">
             Join Our Team
           </h2>

@@ -144,7 +144,7 @@ export default function VisionMission() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="mb-3 font-normal text-customBlack "
             >
-              To Avoid Rejection at customer End. Extend Excellent Customer Support and Service at all time. Effectively implement the Quality Management System by controlling cost of Quality.
+              Extend Excellent Customer Support and Service at all time. Effectively implement the Quality Management System by controlling cost of Quality.
             </motion.p>
           </motion.div>
 
