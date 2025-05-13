@@ -10,7 +10,7 @@ import DefaultPage from "./components/DefaultPage";
 import Carousel from "./components/Carousel";
 import VisionMission from "./components/VisionMission";
 import EmployeeCount from "./components/EmployeeCount";
-
+import ChatWidget from "./components/ChatWidget";
 
 
 const sections = [
@@ -52,15 +52,15 @@ export default function Home() {
   const certificates = [
     {
       id: 1,
-      title: "IATF Certificate",
-      description: "Precision parts with computer-controlled accuracy",
-      image: "/image/cer1.jpg",
-    },
-    {
-      id: 2,
       title: "ISO Certificate",
       description: "Enhancing material properties for optimal performance",
       image: "/image/cer2.webp",
+    },
+    {
+      id: 2,
+      title: "IATF Certificate",
+      description: "Precision parts with computer-controlled accuracy",
+      image: "/image/cer1.jpg",
     },
   ];
 
@@ -110,11 +110,8 @@ export default function Home() {
 
         {/* Bottom Blurry Effect */}
         <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
+        <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
       </section>
-
-
-
-    
 
       {/* Service Section */}
       <section id="services" className="py-20 bg-neutral-50">
@@ -125,48 +122,48 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "CNC Machining",
+                title: "Globe‐Tech Fortune Industries PVT LTD",
                 description:
                   "High-precision CNC machining solutions for complex engineering parts, ensuring accuracy, efficiency, and superior surface finish.",
-                image: "/cnc-machining.webp",
-                link: "/cnc",
+                // image: "/cnc-machining.webp",
+                link: "/globe-tech",
               },
               {
-                title: "Heat Treatment",
+                title: "Gee Pee Fortune Industries",
                 description:
                   "Advanced heat treatment processes to enhance the mechanical properties of metals, including hardening, tempering, and annealing.",
-                image: "/heat-treatment.webp",
-                link: "/heat-treatment",
+                // image: "/heat-treatment.webp",
+                link: "/gee-pee",
               },
               {
-                title: "Cold Forging",
+                title: "Precitechpartune Industries Pvt Ltd",
                 description:
                   "Innovative cold forging techniques to produce strong, lightweight components with minimal material waste and improved durability.",
-                image: "/mini-hero.webp",
-                link: "/cold-forging",
+                // image: "/mini-hero.webp",
+                link: "/precitech",
               },
             ].map((project, index) => (
               <div
                 key={index}
-                className="bg-black rounded-xl overflow-hidden shadow-lg group transition-all duration-300 hover:shadow-xl"
+                className=" bg-[#EFEDEA] text-black rounded-xl overflow-hidden shadow-lg group transition-all duration-300 hover:shadow-xl"
               >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
+                {/* <div className="relative h-64 overflow-hidden"> */}
+                {/* <Image
                     src={project.image}
                     alt={project.title}
                     layout="fill"
                     objectFit="cover"
                     className="transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                  /> */}
+                {/* <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
+                {/* </div> */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
+                  <h3 className="text-3xl font-semibold mb-2">
                     {project.title}
                   </h3>
-                  <div className="w-16 h-1 bg-orange-500 mb-4 rounded-full"></div>
+                  <div className="w-56 h-1 bg-orange-500 mb-4 rounded-full"></div>
 
-                  <p className="text-gray-400">{project.description}</p>
+                  <p className="text-slate-950">{project.description}</p>
                   {/* Button for navigation */}
                   <Link
                     href={project.link}
@@ -181,7 +178,38 @@ export default function Home() {
         </div>
       </section>
 
-            {/* about us  */}
+
+      {/* certificate section? */}
+
+
+      <section id="certificate" className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-ftregolaneue leading-normal tracking-normal mb-12 text-center text-customBlack">
+            Our Certificates
+          </h2>
+
+          {/* Certificate Grid - Centered for 2 items */}
+          <div className="flex flex-wrap justify-center gap-56">
+            {certificates.map((certificate) => (
+              <div
+                key={certificate.id}
+                className="flex flex-col items-center text-center"
+              >
+                <img
+                  src={certificate.image}
+                  alt={certificate.title}
+                  className="w-full max-w-xs h-auto rounded-lg shadow-md object-contain"
+                />
+                <h3 className="text-xl font-semibold mt-4 text-customBlack">
+                  {certificate.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* about us  */}
 
       <section id="about" className="py-20 bg-white relative">
         {/* Background Image */}
@@ -254,8 +282,8 @@ export default function Home() {
         </div>
       </section>
 
-       {/* Leadership Section */}
-       <section id="leadership" className="py-20 bg-neutral-50">
+      {/* Leadership Section */}
+      <section id="leadership" className="py-20 bg-neutral-50">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-inter font-semibold leading-normal tracking-normal mb-12 text-center text-orange-500">
             Our Leaders
@@ -265,7 +293,7 @@ export default function Home() {
               (name, index) => (
                 <div key={name} className="text-center">
                   <div className="mb-4 relative w-40 h-40 mx-auto">
-                    <div className="absolute inset-0 rounded-full border-4 border-orange-400 z-50"  />
+                    <div className="absolute inset-0 rounded-full border-4 border-orange-400 z-50" />
                     <Image
                       src={`/image/leader${index + 1}.jpg`}
                       alt={name}
@@ -299,66 +327,32 @@ export default function Home() {
       </section>
 
 
-            {/* certificate section? */}
-      <section id="certificate" className="py-20 bg-slate-50">
-  <div className="container mx-auto px-4">
-    <h2 className="text-4xl md:text-5xl font-ftregolaneue leading-normal tracking-normal mb-12 text-center text-customBlack">
-      Our Certificates
-    </h2>
-
-    {/* Certificate Grid - Centered for 2 items */}
-    <div className="flex flex-wrap justify-center gap-56">
-      {certificates.map((certificate) => (
-        <div
-          key={certificate.id}
-          className="flex flex-col items-center text-center"
-        >
-          <img
-            src={certificate.image}
-            alt={certificate.title}
-            className="w-full max-w-xs h-auto rounded-lg shadow-md object-contain"
-          />
-          <h3 className="text-xl font-semibold mt-4 text-customBlack">
-            {certificate.title}
-          </h3>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
-
-
       {/* Awards Section */}
       <section
-  id="awards"
-  className="py-20 bg-slate-50 bg-[url('/image/awards-bck.jpg')] bg-cover bg-center bg-no-repeat"
->
-  <div className=" bg-opacity-30 py-10 px-4 rounded-lg">
-    <div className="container mx-auto px-4">
-      <h2 className="text-4xl md:text-5xl font-ftregolaneue leading-normal tracking-normal mb-12 text-center text-customBlack">
-        Our Awards
-      </h2>
+        id="awards"
+        className="py-20 bg-slate-50 bg-[url('/image/awards-bck.jpg')] bg-cover bg-center bg-no-repeat"
+      >
+        <div className=" bg-opacity-30 py-10 px-4 rounded-lg">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl md:text-5xl font-ftregolaneue leading-normal tracking-normal mb-12 text-center text-customBlack">
+              Our Awards
+            </h2>
 
-      <div className="flex justify-center">
-        <div className="flex flex-col items-center text-center">
-          <img
-            src="/bosch_achivement.jpg"
-            alt="Award"
-            className="w-full max-w-xs h-auto rounded-lg shadow-md object-contain"
-          />
-          <h3 className="text-xl font-semibold mt-4 text-customBlack">
-            Best Innovation Award
-          </h3>
+            <div className="flex justify-center">
+              <div className="flex flex-col items-center text-center">
+                <img
+                  src="/bosch_achivement.jpg"
+                  alt="Award"
+                  className="w-full max-w-xs h-auto rounded-lg shadow-md object-contain"
+                />
+                <h3 className="text-xl font-semibold mt-4 text-customBlack">
+                  Best Innovation Award
+                </h3>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-     
+      </section>
 
       {/* Brand logos  */}
       <Carousel />
@@ -367,30 +361,25 @@ export default function Home() {
       <VisionMission />
 
       {/* Service Section */}
-     
-
-     
 
       <div className="absolute bottom-0 left-0 w-screen h-12 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[4px] z-10"></div>
-
 
       {/* Careers Section */}
       <section
         id="careers"
         className="relative py-20 bg-gradient-to-b from-zinc-50 to-orange-50 overflow-hidden"
-        >
+      >
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-[url('/image/background-image.webp')] bg-cover bg-center opacity-70 z-0"
           aria-hidden="true"
-          ></div>
+        ></div>
 
         {/* Employee count */}
 
-
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <EmployeeCount/>
+          <EmployeeCount />
           <h2 className="text-4xl font-bold mb-6 text-customBlack">
             Join Our Team
           </h2>
@@ -406,6 +395,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
+            <ChatWidget />
+
 
       {/* Contact Form and Information */}
       <DefaultPage />
