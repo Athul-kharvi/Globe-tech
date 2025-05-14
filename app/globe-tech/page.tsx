@@ -11,6 +11,13 @@ const cardData = [
         imageUrl: "/tempering.webp",
         link: "/heat-treatment"
     },
+    {
+        title: "Cnc",
+        description: "A computer-controlled manufacturing method used to produce highly precise and complex parts from metal or plastic.",
+        buttonText: "Learn More",
+        imageUrl: "/cnc-machining.webp",
+        link: "/cnc"
+    },
 ];
 
 const CardsPage = () => {

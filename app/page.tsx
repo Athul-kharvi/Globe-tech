@@ -12,7 +12,6 @@ import VisionMission from "./components/VisionMission";
 import EmployeeCount from "./components/EmployeeCount";
 import ChatWidget from "./components/ChatWidget";
 
-
 const sections = [
   {
     title: "CNC Machining",
@@ -111,6 +110,7 @@ export default function Home() {
         {/* Bottom Blurry Effect */}
         <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
         <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
+        <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
       </section>
 
       {/* Service Section */}
@@ -131,14 +131,14 @@ export default function Home() {
               {
                 title: "Gee Pee Fortune Industries",
                 description:
-                  "Advanced heat treatment processes to enhance the mechanical properties of metals, including hardening, tempering, and annealing.",
+                  "Cold Forging, Manufacturing of Precision Components for Automobile industries, Defense, Pump manufacturing industries & General Engineering.",
                 // image: "/heat-treatment.webp",
                 link: "/gee-pee",
               },
               {
                 title: "Precitechpartune Industries Pvt Ltd",
                 description:
-                  "Innovative cold forging techniques to produce strong, lightweight components with minimal material waste and improved durability.",
+                  "Equipped with advanced industrial machinery for precision engineering, ensuring consistent quality and high-efficiency production.",
                 // image: "/mini-hero.webp",
                 link: "/precitech",
               },
@@ -178,9 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* certificate section? */}
-
 
       <section id="certificate" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
@@ -239,13 +237,13 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }} // Animate when in view
               viewport={{ once: true }} // Only animate once
               transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
-              className="w-screen md:w-1/2 p-10 h-auto md:h-[450px] rounded-2xl border-4 border-white bg-slate-100 shadow-lg"
+              className="w-screen md:w-1/2 p-10 rounded-2xl border-4 border-white bg-slate-100 shadow-lg max-h-[600px] overflow-y-auto"
             >
               {/* Animated Heading */}
               <motion.h2
-                initial={{ opacity: 0, y: 20 }} // Slight movement down
-                whileInView={{ opacity: 1, y: 0 }} // Moves up smoothly
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }} // Delayed effect
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 className="text-4xl font-bold mb-6 text-black"
               >
                 About Us
@@ -253,9 +251,9 @@ export default function Home() {
 
               {/* Animated Paragraph */}
               <motion.p
-                initial={{ opacity: 0, y: 20 }} // Start lower
-                whileInView={{ opacity: 1, y: 0 }} // Move up into place
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }} // Delayed for smooth effect
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
                 viewport={{ once: true }}
                 className="text-gray-800 leading-relaxed text-lg font-medium"
               >
@@ -268,12 +266,14 @@ export default function Home() {
                 components. With, "Under One Roof" Concept, Fortune is one of
                 the precise Supplier to its customers by focusing on global
                 supplies. Our strength and focus is on maintaining ZERO
-                Complaints & Excellent in Delivery
+                Complaints & Excellent in Delivery.
               </motion.p>
+
+              {/* Call to Action */}
               <a
                 href="/aboutus"
                 rel="noopener noreferrer"
-                className="md:ml-48 md:bg-orange-500 md:text-customBlack ml-20  inline-block px-6 py-3 mt-10 bg-customBlack text-orange-500 font-bold rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+                className="block text-center mx-auto px-6 py-3 mt-10 bg-orange-500 text-customBlack font-bold rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
               >
                 Learn More
               </a>
@@ -325,7 +325,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       {/* Awards Section */}
       <section
@@ -395,8 +394,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-            <ChatWidget />
-
+      <ChatWidget />
 
       {/* Contact Form and Information */}
       <DefaultPage />

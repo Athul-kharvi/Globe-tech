@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const cardData = [
     {
-        title: "Cnc",
-        description: "A computer-controlled manufacturing method used to produce highly precise and complex parts from metal or plastic.",
+        title: "Machining",
+        description: "A precise manufacturing process that removes material from a workpiece using cutting tools to shape it into the desired form.",
         buttonText: "Learn More",
-        imageUrl: "/cnc-machining.webp",
+        imageUrl: "/hardening.webp",
         link: "/cnc"
     },
 ];
@@ -19,7 +19,7 @@ const CardsPage = () => {
             <CustomHeader />
             {/* <h1 className="text-3xl font-bold text-center  mb-1 0"></h1> */}
             <h1 className="text-lg text-customBlack  mt-28 text-center font-normal sm:text-2xl md:text-5xl  mb-2 sm:mb-4">
-                Our Services
+                Precitech Services
             </h1>       
                  <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {cardData.map((card, index) => (

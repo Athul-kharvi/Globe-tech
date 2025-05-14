@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const EmployeeCount = () => {
   const [count, setCount] = useState(0);
-  const finalCount = 100;
+  const finalCount = 200;
 
   useEffect(() => {
     let start = 0;
@@ -13,7 +13,7 @@ const EmployeeCount = () => {
       if (start >= finalCount) {
         clearInterval(interval);
       }
-    }, 20); // speed of animation
+    }, 40); // speed of animation
 
     return () => clearInterval(interval);
   }, []);

@@ -21,10 +21,10 @@ const ChatWidget = () => {
       )
     ) {
       response = `
-🔧 **Our Services:**
-- **Heat Treatment**: A process of heating and cooling metals to alter their physical and mechanical properties without changing their shape.
-- **CNC Machining**: A computer-controlled manufacturing method used to produce highly precise and complex parts from metal or plastic.
-- **Cold Forging**: A metal forming technique where materials are shaped at room temperature, increasing strength through strain hardening.
+🔧 Our Services:
+Heat Treatment: A process of heating and cooling metals to alter their physical and mechanical properties without changing their shape.
+CNC Machining: A computer-controlled manufacturing method used to produce highly precise and complex parts from metal or plastic.
+Cold Forging: A metal forming technique where materials are shaped at room temperature, increasing strength through strain hardening.
 `;
     } else if (
       ["company", "branch", "sub branch", "category"].some((k) =>
@@ -46,7 +46,7 @@ const ChatWidget = () => {
         "ask",
       ].some((k) => userInput.includes(k))
     ) {
-      response = `📍 **Our Location**:
+      response = `📍 Our Location:
 4th Phase, 438, 12th Cross Rd,
 Ganapathy Nagar, Phase 3, Peenya,
 Bangaluru, Karnataka 560058
@@ -80,7 +80,10 @@ Bangaluru, Karnataka 560058
           {/* Header */}
           <div className="bg-orange-500 text-white px-4 py-2 flex items-center justify-between font-semibold text-sm">
             <span>🔥 Chat with Us</span>
-            <button onClick={() => setIsOpen(false)} className="hover:text-gray-200">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="hover:text-gray-200"
+            >
               <X size={18} />
             </button>
           </div>
@@ -88,7 +91,9 @@ Bangaluru, Karnataka 560058
           {/* Messages */}
           <div className="flex-1 p-3 overflow-y-auto text-sm text-gray-800 bg-orange-50 space-y-2">
             {messages.map((msg, idx) => (
-              <div key={idx} className="whitespace-pre-wrap">{msg}</div>
+              <div key={idx} className="whitespace-pre-wrap">
+                {msg}
+              </div>
             ))}
           </div>
 
