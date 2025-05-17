@@ -12,23 +12,6 @@ import VisionMission from "./components/VisionMission";
 import EmployeeCount from "./components/EmployeeCount";
 import ChatWidget from "./components/ChatWidget";
 
-const sections = [
-  {
-    title: "CNC Machining",
-    description: "Precision engineering for metal components.",
-    image: "/cnc-machining.jpg",
-  },
-  {
-    title: "Heat Treatment",
-    description: "Enhancing material properties for durability.",
-    image: "/heat-treatment.jpg",
-  },
-  {
-    title: "Cold Forging",
-    description: "High-strength metal forming with efficiency.",
-    image: "/cold-forging.jpg",
-  },
-];
 
 export default function Home() {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -95,7 +78,7 @@ export default function Home() {
             Fortune Group of Industries Pvt Ltd
           </h1>
           <p className="text-sm sm:text-lg md:text-2xl mb-4 sm:mb-8 text-gray-300">
-            Specialists in CNC Machining, Heat Treatment, and Cold Forging
+            Specialists in CNC Machining, Heat Treatment, and Cold Forging — equipped with an advanced Metallurgical Lab and CMM for precision and quality assurance.
           </p>
 
           {/* Button Styling for Small Screens */}
@@ -147,16 +130,6 @@ export default function Home() {
                 key={index}
                 className=" bg-[#EFEDEA] text-black rounded-xl overflow-hidden shadow-lg group transition-all duration-300 hover:shadow-xl"
               >
-                {/* <div className="relative h-64 overflow-hidden"> */}
-                {/* <Image
-                    src={project.image}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 group-hover:scale-110"
-                  /> */}
-                {/* <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
-                {/* </div> */}
                 <div className="p-6">
                   <h3 className="text-3xl font-semibold mb-2">
                     {project.title}
@@ -331,27 +304,54 @@ export default function Home() {
         id="awards"
         className="py-20 bg-slate-50 bg-[url('/image/awards-bck.jpg')] bg-cover bg-center bg-no-repeat"
       >
-        <div className=" bg-opacity-30 py-10 px-4 rounded-lg">
+        <div className="bg-opacity-30 py-10 px-4 rounded-lg">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-5xl font-ftregolaneue leading-normal tracking-normal mb-12 text-center text-customBlack">
               Our Awards
             </h2>
 
-            <div className="flex justify-center">
-              <div className="flex flex-col items-center text-center">
-                <img
-                  src="/bosch_achivement.jpg"
-                  alt="Award"
-                  className="w-full max-w-xs h-auto rounded-lg shadow-md object-contain"
-                />
-                <h3 className="text-xl font-semibold mt-4 text-customBlack">
-                  Best Innovation Award
-                </h3>
-              </div>
+            <div className="flex flex-wrap justify-center gap-10">
+              {[
+                {
+                  image: "/bosch_achivement.jpg",
+                  title: "Best Innovation Award",
+                },
+                {
+                  image: "/awards2.webp",
+                  title: "IMS 2022",
+                },
+                {
+                  image: "/awards1.webp",
+                  title: "PIA MSME EXCELLENCE AWARDS 2022 2nd Edition",
+                },
+                {
+                  image: "/awards3.webp",
+                  title: "ICONS OF INDIAN BUSINESS EXCELLENCE AWARDS -2021",
+                },
+                {
+                  image: "./awards4.png",
+                  title: "PIA MSME EXCELLENCE AWARDS 2022",
+                },
+              ].map((award, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center max-w-xs"
+                >
+                  <img
+                    src={award.image}
+                    alt={award.title}
+                    className="w-full max-w-xs h-40 rounded-lg shadow-md object-contain"
+                  />
+                  <h3 className="text-xl font-semibold mt-4 text-customBlack">
+                    {award.title}
+                  </h3>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Brand logos  */}
       <Carousel />
