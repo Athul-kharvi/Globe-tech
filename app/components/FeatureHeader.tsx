@@ -107,6 +107,7 @@ const FeatureHeader: React.FC<FeatureHeaderProps> = ({
               { name: "CNC", path: "/cnc" },
               { name: "Heat Treatment", path: "/heat-treatment" },
               { name: "Cold Forging", path: "/cold-forging" },
+              { name: "Machinery", path: "/machinery" },
             ].map((item) => (
               <li key={item.name} className="text-lg md:text-l font-medium">
                 {disableLinks ? (

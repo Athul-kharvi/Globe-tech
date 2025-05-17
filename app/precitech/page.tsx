@@ -9,7 +9,7 @@ const cardData = [
         description: "A precise manufacturing process that removes material from a workpiece using cutting tools to shape it into the desired form.",
         buttonText: "Learn More",
         imageUrl: "/hardening.webp",
-        link: "/cnc"
+        link: "/machinery"
     },
 ];
 
