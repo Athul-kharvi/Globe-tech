@@ -149,7 +149,28 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <div className="p-6 my-11 bg-white rounded-lg shadow-md max-w-xl mx-auto">
+          <h3 className="text-3xl font-semibold mb-2 text-customBlack">
+            Laboratory Equipment
+          </h3>
+          <div className="w-56 h-1 bg-orange-500 mb-4 rounded-full"></div>
+
+          <p className="text-slate-950 mb-4">
+            Our metallurgical lab is equipped with precision instruments such as micro hardness testers, microscopes, and
+            polishing machines to ensure the highest quality in material testing and validation. These tools help us maintain
+            rigorous quality standards in every project we undertake.
+          </p>
+
+          <Link
+            href="/Lab-equiment"
+            className="inline-block px-6 py-3 bg-orange-500 text-black font-bold rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+          >
+            Learn More
+          </Link>
+        </div>
+
       </section>
+
 
       {/* certificate section? */}
 

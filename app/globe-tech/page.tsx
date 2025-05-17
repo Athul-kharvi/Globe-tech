@@ -1,6 +1,8 @@
 import CustomHeader from "../components/customHeader";
 import React from "react";
 import Link from "next/link";
+import DefaultPage from "../components/DefaultPage";
+
 
 
 const cardData = [
@@ -54,6 +56,8 @@ const CardsPage = () => {
                     </div>
                 ))}
             </div>
+             {/* Contact Form and Information */}
+            <DefaultPage />
         </div>
     );
 };
