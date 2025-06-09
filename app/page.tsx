@@ -64,7 +64,7 @@ export default function Home() {
           preload="auto"
           className="absolute inset-0 w-screen h-full object-cover z-10"
         >
-          <source src="/video/fortune_hero.webm" type="video/webm" />
+        <source src="/video/fortune_hero.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
 
@@ -88,7 +88,8 @@ export default function Home() {
             Get in Touch
           </a>
         </div>
-      </section>
+    </section>
+
 
       {/* Service Section */}
       <section id="services" className="py-20 bg-neutral-50">
@@ -373,10 +374,6 @@ export default function Home() {
 
       {/* Vision Missino section  */}
       <VisionMission />
-
-      {/* Service Section */}
-
-      <div className="absolute bottom-0 left-0 w-screen h-12 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[4px] z-10"></div>
 
       {/* Careers Section */}
       <section
