@@ -70,38 +70,7 @@ export default function ColdForgingPage() {
 
             </section>
 
-            {/* Cold Forging Machinary Section */}
-            <section className="mt-20 bg-white text-black py-16 px-6">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-5xl font-ftregolaneue tracking-tight leading-normal text-center">
-                        Cold Forging Press
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-5 my-9">
-                        {cards.map((card, index) => (
-                            <div
-                                key={index}
-                                className="max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg 
-                     dark:bg-gray-800 dark:border-gray-700 hover:scale-105 transition-transform duration-300"
-                            >
-                                <a className="block overflow-hidden rounded-t-xl">
-                                    <img
-                                        className="w-full h-60 object-cover rounded-t-xl transition-transform duration-300 hover:scale-110"
-                                        src={card.imgSrc}
-                                        alt="Card Image"
-                                    />
-                                </a>
-                                <div className="p-5 text-center">
-                                    <a>
-                                        <h5 className="mb-3 text-xl  font-normal leading-normal tracking-normal text-gray-900 dark:text-white">
-                                            {card.title}
-                                        </h5>
-                                    </a>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 
                  <h2 className="text-5xl font-ftregolaneue tracking-tight leading-normal text-center mt-4">
                         Machinery Details

@@ -70,7 +70,6 @@ export default function Home() {
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black opacity-70 z-10"></div>
-
         {/* Overlay Content */}
         <div className="container mx-auto px-4 relative z-20 text-white">
           {/* Adjust font size and spacing based on screen size */}
@@ -89,11 +88,6 @@ export default function Home() {
             Get in Touch
           </a>
         </div>
-
-        {/* Bottom Blurry Effect */}
-        <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
-        <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
-        <div className="absolute bottom-0 left-0 w-screen h-10 sm:h-28 bg-gradient-to-b from-black/10 via-black/40 to-white backdrop-blur-[10px] z-10"></div>
       </section>
 
       {/* Service Section */}
