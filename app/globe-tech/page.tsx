@@ -24,7 +24,7 @@ const cardData = [
 
 const CardsPage = () => {
     return (
-        <div className="min-h-screen bg-[#EFEDEA] p-6">
+        <div className="min-h-screen bg-[#EFEDEA] p-6  w-screen overflow-hidden">
             <CustomHeader />
             {/* <h1 className="text-3xl font-bold text-center  mb-1 0"></h1> */}
                <h1 className="text-lg text-customBlack  mt-28 text-center font-normal sm:text-2xl md:text-5xl  mb-2 sm:mb-4">

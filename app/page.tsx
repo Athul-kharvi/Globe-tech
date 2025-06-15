@@ -399,7 +399,7 @@ export default function Home() {
             team.
           </p>
           <Link
-            href="/career"
+            href="https://career.fortuneindocorp.com/"
             className="inline-block py-3 px-8 bg-orange-500 text-black rounded-full text-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors duration-300 shadow-md"
           >
             View Opportunities
