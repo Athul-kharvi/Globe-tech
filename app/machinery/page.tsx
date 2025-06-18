@@ -72,20 +72,25 @@ export default function ColdForgingPage() {
 
 
 
-                 <h2 className="text-5xl font-ftregolaneue tracking-tight leading-normal text-center mt-4">
-                        Machinery Details
-                    </h2>
+            <h2 className="text-5xl font-ftregolaneue tracking-tight leading-normal text-center mt-4">
+                Machinery Details
+            </h2>
             <div className="flex justify-center items-start gap-10 mt-14 px-4 mb-10">
                 {/* Grid Section */}
                 <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:max-w-[50rem] md:flex-row">
                     {machineryList.map((machine, idx) => (
                         <div
                             key={idx}
-                            className="relative overflow-hidden rounded-3xl border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
+                            className="relative overflow-hidden rounded-3xl border bg-white select-none hover:shadow hover:shadow-teal-200 p-2 about-card"
                         >
-                            <div className="flex h-[400px] flex-col justify-between rounded-2xl p-6">
+                            {/* Animated Blob and Frosted Background */}
+                            <div className="about-card-blob"></div>
+                            <div className="about-card-bg"></div>
+
+                            {/* Content */}
+                            <div className="relative z-10 flex h-[400px] flex-col justify-between rounded-2xl p-6">
                                 <div className="space-y-2">
-                                    <h3 className="font-ftregolaneue font-medium text-xl text-left text-black">
+                                    <h3 className="font-ftregolaneue font-medium text-xl text-left text-black uppercase">
                                         {machine.title}
                                     </h3>
                                     <div className="w-16 h-1 bg-black my-2 rounded-full"></div>
@@ -95,6 +100,7 @@ export default function ColdForgingPage() {
                                 </div>
                             </div>
                         </div>
+
                     ))}
                 </div>
 

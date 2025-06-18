@@ -158,18 +158,24 @@ const HeatTreatment = () => {
                 key={idx}
                 className="relative overflow-hidden rounded-3xl border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
               >
-                <div className="flex h-[260px] flex-col justify-between rounded-2xl p-6">
-                  <div className="space-y-2">
-                    <h3 className="font-ftregolaneue font-medium text-2xl text-left">
+                <div className="relative flex h-[260px] flex-col justify-between rounded-2xl p-6 overflow-hidden about-card">
+                  {/* Animated Blob and Frosted Background */}
+                  <div className="about-card-blob"></div>
+                  <div className="about-card-bg"></div>
+
+                  {/* Your Content */}
+                  <div className="relative z-10 space-y-2">
+                    <h3 className="font-ftregolaneue font-medium text-2xl text-left uppercase text-black">
                       {machine.title}
                     </h3>
                     <div className="w-16 h-1 bg-orange-500 mb-4 rounded-full"></div>
 
-                    <p className="text-xs text-muted-foreground whitespace-pre-line tracking-normal leading-normal text-left">
+                    <p className="text-xs text-muted-foreground whitespace-pre-line tracking-normal leading-normal text-left text-black">
                       {machine.description}
                     </p>
                   </div>
                 </div>
+
               </div>
             ))}
           </div>

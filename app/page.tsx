@@ -64,7 +64,7 @@ export default function Home() {
           preload="auto"
           className="absolute inset-0 w-screen h-full object-cover z-10"
         >
-        <source src="/video/fortune_hero.webm" type="video/webm" />
+          <source src="/video/fortune_hero.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
 
@@ -88,7 +88,7 @@ export default function Home() {
             Get in Touch
           </a>
         </div>
-    </section>
+      </section>
 
 
       {/* Service Section */}
@@ -222,18 +222,22 @@ export default function Home() {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 50 }} // Start invisible and move up
-              whileInView={{ opacity: 1, y: 0 }} // Animate when in view
-              viewport={{ once: true }} // Only animate once
-              transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
-              className="w-screen md:w-1/2 p-10 rounded-2xl border-4 border-white bg-slate-100 shadow-lg max-h-[600px] overflow-y-auto"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="about-card w-screen md:w-1/2 p-10 rounded-2xl border-4 border-white bg-slate-100 shadow-lg max-h-[600px] overflow-y-auto"
             >
+              {/* Animated background layers */}
+              <div className="about-card-blob"></div>
+              <div className="about-card-bg"></div>
+
               {/* Animated Heading */}
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                className="text-4xl font-bold mb-6 text-black"
+                className="text-4xl font-bold mb-6 text-black relative z-10"
               >
                 About Us
               </motion.h2>
@@ -244,8 +248,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
                 viewport={{ once: true }}
-                className="text-gray-800 leading-relaxed text-lg font-medium"
+                className="text-gray-800 leading-relaxed text-lg font-medium relative z-10"
               >
+
                 Fortune Group of Industries is a fully equipped group for Cold
                 Forging, CNC Machining, Heat Treatment, and In-House
                 Fabrication. It is supplying engineering components for various
@@ -262,14 +267,16 @@ export default function Home() {
               <a
                 href="/aboutus"
                 rel="noopener noreferrer"
-                className="block text-center mx-auto px-6 py-3 mt-10 bg-orange-500 text-customBlack font-bold rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+                className="block text-center mx-auto px-6 py-3 mt-10 bg-orange-500 text-customBlack font-bold rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg relative z-10"
               >
                 Learn More
               </a>
             </motion.div>
+
           </div>
         </div>
       </section>
+
 
       {/* Leadership Section */}
       <section id="leadership" className="py-20 bg-neutral-50">

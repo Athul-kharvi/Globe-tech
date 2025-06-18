@@ -30,7 +30,7 @@ const CardsPage = () => {
              <h1 className="text-lg text-customBlack  mt-28 text-center font-normal sm:text-2xl md:text-5xl  mb-2 sm:mb-4">
                 Gee Pee Services
             </h1>
-            <div className="grid gap-6 mt-24 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 mt-24 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
                 {cardData.map((card, index) => (
                     <div
                         key={index}

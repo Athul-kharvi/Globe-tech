@@ -31,7 +31,7 @@ const LabEquiment = () => {
                     <ul className="space-y-4 text-lg text-gray-800">
                         {equipmentList.map((item, index) => (
                             <li key={index} className="border-l-4 border-orange-500 pl-4">
-                                <span className="font-semibold">{item.name}</span>
+                                <span className="font-semibold uppercase">{item.name}</span>
                                 <br />
                                 <span className="text-sm text-gray-600">Make: {item.make}</span>
                             </li>

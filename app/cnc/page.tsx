@@ -212,17 +212,25 @@ export default function CNCPage() {
               key={idx}
               className="relative overflow-hidden rounded-3xl border bg-white select-none hover:shadow hover:shadow-teal-200 p-2"
             >
-              <div className="flex h-[400px] flex-col justify-between rounded-2xl p-6">
-                <div className="space-y-2">
-                  <h3 className="font-ftregolaneue font-medium text-xl text-left">
-                    {machine.title}
-                  </h3>
-                  <div className="w-16 h-1 bg-black my-2 rounded-full"></div>
-                  <p className="text-xs text-muted-foreground whitespace-pre-line tracking-normal leading-normal text-left">
-                    {machine.description}
-                  </p>
+              <div className="relative overflow-hidden rounded-2xl shadow-lg p-6 about-card h-[400px]">
+                {/* Blob Background Animation */}
+                <div className="about-card-blob"></div>
+                <div className="about-card-bg"></div>
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col justify-between h-full">
+                  <div className="space-y-2">
+                    <h3 className="font-ftregolaneue font-medium text-xl text-left uppercase text-black">
+                      {machine.title}
+                    </h3>
+                    <div className="w-16 h-1 bg-black my-2 rounded-full"></div>
+                    <p className="text-xs whitespace-pre-line tracking-normal leading-normal text-left text-black">
+                      {machine.description}
+                    </p>
+                  </div>
                 </div>
               </div>
+
             </div>
           ))}
         </div>

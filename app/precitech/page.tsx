@@ -22,6 +22,16 @@ const cardData = [
     },
 ];
 
+const certificates = [
+    {
+        id: 1,
+        title: "IATF Certificate",
+        description: "Precision parts with computer-controlled accuracy",
+        image: "/image/cer1.jpg",
+    },
+];
+
+
 const CardsPage = () => {
     return (
         <div className="min-h-screen bg-[#EFEDEA] p-6">
@@ -29,8 +39,8 @@ const CardsPage = () => {
             {/* <h1 className="text-3xl font-bold text-center  mb-1 0"></h1> */}
             <h1 className="text-lg text-customBlack  mt-28 text-center font-normal sm:text-2xl md:text-5xl  mb-2 sm:mb-4">
                 Precitech Services
-            </h1>       
-                 <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            </h1>
+            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
                 {cardData.map((card, index) => (
                     <div
                         key={index}
@@ -56,7 +66,34 @@ const CardsPage = () => {
                     </div>
                 ))}
             </div>
-             {/* Contact Form and Information */}
+
+            <section id="certificate" className="py-20 bg-slate-50">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-4xl md:text-5xl font-ftregolaneue leading-normal tracking-normal mb-12 text-center text-customBlack">
+                        Our Certificates
+                    </h2>
+
+                    {/* Certificate Grid - Centered for 2 items */}
+                    <div className="flex flex-wrap justify-center gap-56">
+                        {certificates.map((certificate) => (
+                            <div
+                                key={certificate.id}
+                                className="flex flex-col items-center text-center"
+                            >
+                                <img
+                                    src={certificate.image}
+                                    alt={certificate.title}
+                                    className="w-full max-w-xs h-auto rounded-lg shadow-md object-contain"
+                                />
+                                <h3 className="text-xl font-semibold mt-4 text-customBlack">
+                                    {certificate.title}
+                                </h3>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            {/* Contact Form and Information */}
             <DefaultPage />
         </div>
     );
